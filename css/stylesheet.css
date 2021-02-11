@@ -9,42 +9,30 @@
 --royal-blue: #432770;
 }
 
+html{
+    display: flex;
+    justify-content: center;
+}
+
 body{
-    background-color: var(--baby-blue);
-    margin: 0px;
-}
-
-h1{
-    margin: 0px;
-}
-
-.diner{
-    display: flex;
-    min-height:400px;
-    background-color: var(--navy-blue);
-}
-
-.menu{
-    background-color: var(--off-white);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
-    box-shadow: 0px -10px 20px var(--royal-blue);
-    padding: 1em;
+    grid-template-rows: .5fr repeat(4, 1fr) .5fr;
+    grid-template-columns: .5fr repeat(6, 1fr) .5fr;
+    height: 960px;
+    width: 1280px;
 }
 
-.zodiac{
-    background-color: var(--orange);
-    padding: .5em;
-    display: flex;
-    align-items: left;
-    justify-content: top;
-    margin: 0;
+main{
+    background-color: red;
+    grid-area: 2 / 2 / 5 / 5;
 }
 
-.zodiac img{
-    position: absolute;
-    top: 0;
-    left: 0;
+sidebar{
+    background-color: blue;
+    grid-area: 2 / 5 / 5 / 8;
+}
+
+navigation{
+    background-color: green;
+    grid-area: 5 / 2 / 6 / 8;
 }
