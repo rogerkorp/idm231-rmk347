@@ -1,0 +1,50 @@
+:root{
+--dark-red: #670333;
+--light-red: #bb3959;
+--orange: #f87e7e;
+--cream: #ffdacd;
+--off-white: #fff1f6;
+--baby-blue: #919dcc;
+--navy-blue: #5e5996;
+--royal-blue: #432770;
+}
+
+body{
+    background-color: var(--baby-blue);
+    margin: 0px;
+}
+
+h1{
+    margin: 0px;
+}
+
+.diner{
+    display: flex;
+    min-height:400px;
+    background-color: var(--navy-blue);
+}
+
+.menu{
+    background-color: var(--off-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    box-shadow: 0px -10px 20px var(--royal-blue);
+    padding: 1em;
+}
+
+.zodiac{
+    background-color: var(--orange);
+    padding: .5em;
+    display: flex;
+    align-items: left;
+    justify-content: top;
+    margin: 0;
+}
+
+.zodiac img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
