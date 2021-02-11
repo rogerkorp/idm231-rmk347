@@ -7,14 +7,23 @@
 --baby-blue: #919dcc;
 --navy-blue: #5e5996;
 --royal-blue: #432770;
+--grey-25: #333333;
+--grey-50: #777777;
+--grey-75: #bbbbbb;
+}
+
+h1{
+    margin: 0;
+    font-size: 3em;
 }
 
 html{
     display: flex;
     justify-content: center;
+    background-color: var(--off-white);
 }
 
-body{
+body{ /* Sets the grid to a 6 row area, 8 column area that's 960 pixels tall, and 1280 pixels wide. It's about the same aspect ratio as a 4:3 monitor */ 
     display: grid;
     grid-template-rows: .5fr repeat(4, 1fr) .5fr;
     grid-template-columns: .5fr repeat(6, 1fr) .5fr;
@@ -22,17 +31,36 @@ body{
     width: 1280px;
 }
 
-main{
-    background-color: red;
+main{  /* Controls the section used to display the name of the Zodiac and the associated image.*/ 
+    background-color: var(--cream); 
     grid-area: 2 / 2 / 5 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-sidebar{
-    background-color: blue;
+sidebar{ /* Controls the section used to display information about the Zodiac, the submit and help buttons, and the entry box.*/ 
+    background-color:var(--orange);
     grid-area: 2 / 5 / 5 / 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-navigation{
-    background-color: green;
+navigation{ /* Controls the section used to display all possible zodiacs that a person can scroll through */ 
+    background-color: var(--baby-blue);
     grid-area: 5 / 2 / 6 / 8;
+    box-shadow: 0px 20px 30px var(--grey-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info{ /* Controls the division used to display the text about the zodiac */ 
+    background-color: var(--off-white);
+    padding: 1em;
+    margin: 2em;
 }
