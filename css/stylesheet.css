@@ -3,10 +3,10 @@
 --light-red: #bb3959;
 --orange: #f87e7e;
 --cream: #ffdacd;
---off-white: #fff1f6;
---baby-blue: #919dcc;
---navy-blue: #5e5996;
---royal-blue: #432770;
+--off-white: #f1fbff;
+--baby-blue: #d1f3d8;
+--navy-blue: #8fd3be;
+--royal-blue: #18a380;
 --grey-25: #333333;
 --grey-50: #777777;
 --grey-75: #bbbbbb;
@@ -55,7 +55,7 @@ body{ /* Sets the grid to a 6 row area, 8 column area that's 960 pixels tall, an
 }
 
 main{  /* Controls the section used to display the name of the Zodiac and the associated image.*/ 
-    background-color: var(--cream); 
+    background-color: var(--cream);
     grid-area: 2 / 2 / 5 / 5;
     display: flex;
     justify-content: center;
@@ -99,6 +99,7 @@ button{
     border: none;
     font-family: futuramedium;
     font-size: .75em;
+    cursor: pointer;
 }
 
 button:hover{
@@ -108,7 +109,7 @@ button:hover{
 navigation{ /* Controls the section used to display all possible zodiacs that a person can scroll through */ 
     background-color: var(--baby-blue);
     grid-area: 5 / 2 / 6 / 8;
-    box-shadow: 0px 20px 30px var(--grey-50);
+    box-shadow: 0px 20px 30px white;
     display: flex;
     justify-content: center;
     align-items: center;
