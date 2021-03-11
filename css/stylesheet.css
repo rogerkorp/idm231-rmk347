@@ -4,22 +4,23 @@
 --orange: #f87e7e;
 --cream: #ffdacd;
 --off-white: #f1fbff;
---baby-blue: #d1f3d8;
---navy-blue: #8fd3be;
---royal-blue: #18a380;
+--baby-blue: #92cff3;
+--navy-blue: #467ce0;
+--royal-blue: #053f5a;
 --grey-25: #333333;
 --grey-50: #777777;
 --grey-75: #bbbbbb;
 }
 
+
+
 #description{
     color: var(--light-red);
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-#zodiac{
-    position: absolute;
-    margin-top: 300px;
+#zodiac-form{
     background-color: var(--off-white);
     height: 35px;
     width: 250px;
@@ -49,8 +50,10 @@ body{ /* Sets the grid to a 6 row area, 8 column area that's 960 pixels tall, an
     display: grid;
     grid-template-rows: .5fr repeat(4, 1fr) .5fr;
     grid-template-columns: .5fr repeat(6, 1fr) .5fr;
-    height: 960px;
-    width: 1280px;
+    min-height: 960px;
+    min-width: 1280px;
+    max-height: 960px;
+    max-width:  1280px;
     font-family: futuramedium;
 }
 
@@ -61,7 +64,13 @@ main{  /* Controls the section used to display the name of the Zodiac and the as
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-top-left-radius: 2em;
 }
+
+main h1{
+    margin-top: 20px;
+}
+
 
 sidebar{ /* Controls the section used to display information about the Zodiac, the submit and help buttons, and the entry box.*/ 
     background-color:var(--orange);
@@ -70,10 +79,25 @@ sidebar{ /* Controls the section used to display information about the Zodiac, t
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-top-right-radius: 2em;
 }
 
 #display{
     margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.submit{
+    background-color: var(--light-red);
+    border-radius: 35px;
+    width: 150px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-style: bold;
+}
+
+.submit:hover{
+    background-color: var(--dark-red);
 }
 
 .help{
@@ -82,6 +106,14 @@ sidebar{ /* Controls the section used to display information about the Zodiac, t
     width: 150px;
     font-size: 1em;
     text-transform: uppercase;
+    margin-bottom: 2em;
+    display: block;
+    top: 600px;
+    padding: 0px;
+}
+
+#zodiac-date{
+    display: block;
 }
 
 .help:hover{
@@ -102,6 +134,10 @@ button{
     cursor: pointer;
 }
 
+button img{
+    max-width: 60px;
+}
+
 button:hover{
     background-color: var(--royal-blue);
 }
@@ -114,12 +150,16 @@ navigation{ /* Controls the section used to display all possible zodiacs that a 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    box-shadow: lightgrey 0px 20px 15px;
 }
 
 .info{ /* Controls the division used to display the text about the zodiac */ 
     background-color: var(--cream);
-    padding: 1em;
-    margin: 2em;
+    padding: 1.5em;
+    margin: 2em 2em 5px 2em;
+    border-radius: 1em;
 }
 
 
