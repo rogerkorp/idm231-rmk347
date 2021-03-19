@@ -87,10 +87,11 @@ html{
 
 #dateRange{
     color: var(--light-red);
-    display:block;
+    display:inline-block;
     font-size: 1.2em;
-    margin-bottom: 18.75em;
+    overflow: auto;
     position: absolute;
+    transform: translateY(-8em);
 }
 
 #description{
