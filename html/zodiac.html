@@ -19,51 +19,50 @@
         <audio id="donutMP3" src="../sounds/donut.mp3" preload="auto"></audio>
         <audio id="muffinMP3" src="../sounds/muffin.mp3" preload="auto"></audio>
         <audio id="yolkMP3" src="../sounds/egg.mp3" preload="auto"></audio>
-
-        <main>
-            <h1>The Ethereal Diner</h1>
-            <i id=description>Can I take your order?</i><br>
-            <i id="dateRange"></i>
-            <img src="../images/default.PNG" id=display>
-        </main>
-
-        <sidebar>
-            <div id="info">
-                Welcome to the Ethereal Diner! Here you can order some of the finest foods in the galaxy. To place and order, simply press one of the buttons below, or let us decide the food for you based on your birthday!
+        
+            <div class="main">
+                <h1>The Ethereal Diner</h1>
+                <i id="description">Can I take your order?</i><br>
+                <i id="dateRange"></i>
+                <img src="../images/default.PNG" id="display" alt="zodiac sign">
             </div>
-                <input type="date" id="zodiac-form" name="date">
-                <button class=submit  onclick="getDate()" id="submit">Place your order!</button>
-            <button class=help id="help" onclick="showHelp()">Need Help?</button>
 
-        </sidebar>
+            <div class="sidebar">
+                <div id="info">
+                    Welcome to the Ethereal Diner! Here you can order some of the finest foods in the galaxy. To place and order, simply press one of the buttons below, or let us decide the food for you based on your birthday!
+                </div>
+                    <input type="date" id="zodiac-form" name="date">
+                    <button class="submit"  onclick="getDate()" id="submit">Place your order!</button>
+                <button class="help" id="help" onclick="showHelp()">Need Help?</button>
 
-        <navigation>
-            <button id="coffee"><img src="../images/coffee-icon.PNG"></button>
-            <button id="orange"><img src="../images/orange-juice-icon.PNG"></button>
-            <button id="milk"><img src="../images/milk-icon.PNG"></button>
-            <button id="straw"><img src="../images/strawberry-icon.PNG"></button>
-            <button id="apple"><img src="../images/apple-pie-icon.PNG"></button>
-            <button id="cereal"><img src="../images/cereal-icon.PNG"></button>
-            <button id="pancake"><img src="../images/pancakes-icon.PNG"></button>
-            <button id="toast"><img src="../images/toast-icon.PNG"></button>
-            <button id="bagel"><img src="../images/bagel-icon.PNG"></button>
-            <button id="donut"><img src="../images/donut-icon.PNG"></button>
-            <button id="muffin"><img src="../images/muffin-icon.PNG"></button>
-            <button id="yolk"><img src="../images/yolk-icon.PNG"></button>
-        </navigation>
-
-        <help id="helpinfo" style="display: none;">
-            <div id="helpbox">
-                <h1>How To Use This Website</h1>
-                <ul>
-                    <li><b>Step 1: Enter your Birthday!</b><br> Click on the date entry box to either manually select your birthday, or type it in using mm/dd/yyyy formatting.</li>
-                    <li><b>Step 2: Click the "Place Your Order" Button!</b> <br> This will submit the birthday you entered. Make sure it's in a real date though, otherwise the order won't go through!</li>
-                    <li><b>Step 3: Read your Sign!</b> <br> This website will automatically update to show you information about your sign. If you would like to see the others, click on the corresponding buttons below!</li>
-                </ul>
-                <button class=help id="okay" onclick="showHelp()">Gotcha!</button>
             </div>
-        </help>
-    
+
+            <div class="navigation">
+                <button id="coffee"><img src="../images/coffee-icon.PNG" alt="coffee icon"></button>
+                <button id="orange"><img src="../images/orange-juice-icon.PNG" alt="orange juice icon"></button>
+                <button id="milk"><img src="../images/milk-icon.PNG" alt="milk icon"></button>
+                <button id="straw"><img src="../images/strawberry-icon.PNG" alt="strawberry icon"></button>
+                <button id="apple"><img src="../images/apple-pie-icon.PNG" alt="apple pie icon"></button>
+                <button id="cereal"><img src="../images/cereal-icon.PNG" alt="cereal icon"></button>
+                <button id="pancake"><img src="../images/pancakes-icon.PNG" alt="pancake icon"></button>
+                <button id="toast"><img src="../images/toast-icon.PNG" alt="toast icon"></button>
+                <button id="bagel"><img src="../images/bagel-icon.PNG" alt="bagel icon"></button>
+                <button id="donut"><img src="../images/donut-icon.PNG" alt="donut icon"></button>
+                <button id="muffin"><img src="../images/muffin-icon.PNG" alt="muffin icon"></button>
+                <button id="yolk"><img src="../images/yolk-icon.PNG" alt="yolk icon"></button>
+            </div>
+
+            <div class="pleaseHelp" id="helpinfo" style="display: none;">
+                <div id="helpbox">
+                    <h1>How To Use This Website</h1>
+                    <ul>
+                        <li><b>Step 1: Enter your birthday!</b><br> Click on the date entry box to either manually select your birthday, or type it in using mm/dd/yyyy formatting.</li>
+                        <li><b>Step 2: Click the "Place Your Order" button!</b> <br> This will submit the birthday you entered. Make sure it's in a real date though, otherwise the order won't go through!</li>
+                        <li><b>Step 3: Read your sign!</b> <br> This website will automatically update to show you information about your sign. If you would like to see the others, click on the corresponding buttons below!</li>
+                    </ul>
+                    <button class="help" id="okay" onclick="showHelp()">Gotcha!</button>
+                </div>
+            </div>
+        <script src="../javascript/script.js"></script>
     </body>
-    <script src="../javascript/script.js"></script>
 </html>
