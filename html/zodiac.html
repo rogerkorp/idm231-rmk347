@@ -3,26 +3,37 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Etherial Diner</title>
+        <title>The Ethereal Diner</title>
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body> 
-        
+        <audio id="coffeeMP3" src="../sounds/coffee.mp3" preload="auto"></audio>
+        <audio id="orangeMP3" src="../sounds/orange.mp3" preload="auto"></audio>
+        <audio id="milkMP3" src="../sounds/milk.mp3" preload="auto"></audio>
+        <audio id="strawberryMP3" src="../sounds/strawberry.mp3" preload="auto"></audio>
+        <audio id="appleMP3" src="../sounds/apple.mp3" preload="auto"></audio>
+        <audio id="cerealMP3" src="../sounds/cereal.mp3" preload="auto"></audio>
+        <audio id="pancakeMP3" src="../sounds/pancake.mp3" preload="auto"></audio>
+        <audio id="toastMP3" src="../sounds/toast.mp3" preload="auto"></audio>
+        <audio id="bagelMP3" src="../sounds/bagel.mp3" preload="auto"></audio>
+        <audio id="donutMP3" src="../sounds/donut.mp3" preload="auto"></audio>
+        <audio id="muffinMP3" src="../sounds/muffin.mp3" preload="auto"></audio>
+        <audio id="yolkMP3" src="../sounds/egg.mp3" preload="auto"></audio>
+
         <main>
-            <h1>The Etherial Diner</h1>
-            <i id=description>Can I take your order?</i>
+            <h1>The Ethereal Diner</h1>
+            <i id=description>Can I take your order?</i><br>
+            <i id="dateRange"></i>
             <img src="../images/default.PNG" id=display>
         </main>
 
         <sidebar>
-            <div class="info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit libero id rutrum viverra. Vivamus mattis rutrum vehicula. Duis feugiat sed urna eget rhoncus. Quisque mollis sem rutrum justo fermentum, ullamcorper interdum orci sagittis. Vivamus cursus est tempus molestie tristique. Vivamus quis porttitor dui, nec porttitor dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed feugiat velit et felis tempus, vel imperdiet metus finibus. Integer lorem leo, egestas tempus ullamcorper vitae, condimentum quis velit.
-
-                Fusce nec ultrices eros, eu laoreet sem. Ut nec pharetra libero, ut placerat est. Suspendisse vulputate dictum ultricies. Nunc dignissim lorem ut diam rutrum pharetra. Proin risus urna, porta a suscipit non, vestibulum a neque. Suspendisse potenti. Aliquam erat volutpat. 
+            <div id="info">
+                Welcome to the Ethereal Diner! Here you can order some of the finest foods in the galaxy. To place and order, simply press one of the buttons below, or let us decide the food for you based on your birthday!
             </div>
                 <input type="date" id="zodiac-form" name="date">
                 <button class=submit  onclick="getDate()" id="submit">Place your order!</button>
-            <button class=help id="help">Need Help?</button>
+            <button class=help id="help" onclick="showHelp()">Need Help?</button>
 
         </sidebar>
 
@@ -40,6 +51,18 @@
             <button id="muffin"><img src="../images/muffin-icon.PNG"></button>
             <button id="yolk"><img src="../images/yolk-icon.PNG"></button>
         </navigation>
+
+        <help id="helpinfo" style="display: none;">
+            <div id="helpbox">
+                <h1>How To Use This Website</h1>
+                <ul>
+                    <li><b>Step 1: Enter your Birthday!</b><br> Click on the date entry box to either manually select your birthday, or type it in using mm/dd/yyyy formatting.</li>
+                    <li><b>Step 2: Click the "Place Your Order" Button!</b> <br> This will submit the birthday you entered. Make sure it's in a real date though, otherwise the order won't go through!</li>
+                    <li><b>Step 3: Read your Sign!</b> <br> This website will automatically update to show you information about your sign. If you would like to see the others, click on the corresponding buttons below!</li>
+                </ul>
+                <button class=help id="okay" onclick="showHelp()">Gotcha!</button>
+            </div>
+        </help>
     
     </body>
     <script src="../javascript/script.js"></script>
